@@ -26,12 +26,12 @@ _get_repolink () {
     regex='(https?)://github.com/.+/.+'
     if [[ $UPSTREAM_REPO == "zed" ]]
     then
-        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL1plZHRob24vWkVEX1VTRVJCT1Q=" | base64 -d`
+        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL3ZlcnNvbjIwNS9UdXNlcmJvdA==" | base64 -d`
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         rlink=`echo "${UPSTREAM_REPO}"`
     else
-        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL1plZHRob24vWkVEX1VTRVJCT1Q=" | base64 -d`
+        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL3ZlcnNvbjIwNS9UdXNlcmJvdA==" | base64 -d`
     fi
     echo "$rlink"
 }
